@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{"/assets/css/style.css" |> url}}">
+  <link rel="stylesheet" href="{{"/assets/css/utils.css" |> url}}">
+  <title>Chat</title>
+</head>
+<body>
+  <div id="sidebar">
+    <div id="profileBar">
+      <div id="profileBarContent">
+        <div class="flex gap-2">
+        <img src="{{profile.picture |> url}}" id="profileBarPicture">
+        <div class="flex flex-col justify-center">
+          <p class="text-lg font-medium">{{profile.name}}</p>
+          <p class="text-[#545454]">Activa ahora</p>
+        </div> 
+        </div>
+      </div>
+    </div>
+    <div id="newChat">
+      <button id="newChatButton">New chat</button>
+    </div>
+     {{for contact of contacts}}
+      <div class="chat">
+        <img src="{{`/assets/images/${encodeURIComponent(contact.picture)}` |> url}}">
+        <div class="flex flex-col justify-center">
+          <p class="font-medium">{{contact.name}}</p>
+          <p class="text-[#545454] font-light">{{contact.text}}</p>
+        </div>
+      </div>
+     {{/for}}
+  </div>
+  <main>
+    <img src="{{logo |> url}}" class="w-80">
+    <p class="text-5xl font-medium">Comienza el networking</p>
+    <p class="text-2xl font-light">Presiona el botón "Nuevo chat" para comenzar</p>
+  </main>
+</body>
+</html>
+

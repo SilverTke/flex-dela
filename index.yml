@@ -1,0 +1,13 @@
+layout: base.vto
+logo: /assets/images/hand.png
+profile:
+  picture: /assets/images/maria.jpg
+  name: María
+  status: Activa ahora
+contacts:
+  - name: Juanita
+    picture: Screen Shot 2018-11-28 at 15.27.14.jpg
+    text: Nam vitae mollis netus
+  - name: Ana
+    picture: "Screen Shot 2018-11-28 at 15.28.04.jpg"
+    text: Mi mollis rhoncus eget
